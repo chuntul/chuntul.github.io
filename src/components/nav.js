@@ -9,24 +9,42 @@ const StyledNav = styled.div`
   position:absolute;
 
   .link {
-      background: transparent;
-      border: none;
-      font-family: ${fonts.body_font};
-      display:block;
-      font-size: calc(0.7vw + 0.7em);
-      font-weight:300;
-      color: ${colors.main_text};
-      margin-top:1.5vh;
-      cursor: pointer;
-  }
+    background: transparent;
+    border: none;
+    font-family: ${fonts.body_font};
+    display:block;
+    font-size: calc(0.7vw + 0.7em);
+    font-weight:300;
+    color: ${colors.main_text};
+    margin-top:1.5vh;
+    cursor: pointer;
+    width:150px;
+    text-align:left;
 
-  .link:hover {
-      
-  }
+    &:before {
+      background-color: #000;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      margin-right:0px;
+      width: 0px;
+      transition: all 0.25s ease-out 0s;
+    }
 
-  .link:focus {
+    &:hover:before {
+      width:30px;
+      margin-right:10px;
+      transition: all 0.25s ease-out 0s;
+    }
+
+    &:focus {
       outline: 0;
+    }
   }
+}
+  
 `;
 
 const Nav = () => (
