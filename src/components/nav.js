@@ -4,29 +4,29 @@ import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 
 const StyledNav = styled.div`
-    bottom:5vh;
-    left:5vh;
-    position:fixed;
+  bottom:5vh;
+  left:5vh;
+  position:absolute;
 
-    .link {
-        background: transparent;
-        border: none;
-        font-family: ${fonts.body_font};
-        display:block;
-        font-size: calc(0.7vw + 0.7em);
-        font-weight:300;
-        color: ${colors.main_text};
-        margin-top:1.5vh;
-        cursor: pointer;
-    }
+  .link {
+      background: transparent;
+      border: none;
+      font-family: ${fonts.body_font};
+      display:block;
+      font-size: calc(0.7vw + 0.7em);
+      font-weight:300;
+      color: ${colors.main_text};
+      margin-top:1.5vh;
+      cursor: pointer;
+  }
 
-    .link:hover {
-        
-    }
+  .link:hover {
+      
+  }
 
-    .link:focus {
-        outline: 0;
-    }
+  .link:focus {
+      outline: 0;
+  }
 `;
 
 const Nav = () => (

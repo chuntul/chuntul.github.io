@@ -2,28 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
-
 import Layout from '../components/layout';
+
+import bg from '../images/bg.jpg';
 
 const StyledIndex = styled.div`
   width:100vw;
   height: 100vh;
   margin:0;
   background: ${colors.main_bg};
-  background: url('./bg.png');
+  background: url(${bg});
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding:5vh;
   font-size:1em;
 
   .container {
+    position:absolute;
     height: 55%;
+    margin-top:5vh;
+    margin-left: 5vh;
   }
 
   .desc {
     font-size: ${fonts.body_size};
     width: 60%;
+  }
+
+  .home-blob {
+    position: fixed;
   }
 `;
 
@@ -58,6 +65,7 @@ const IndexPage = () => (
             .
           </span>
         </div>
+
       </div>
     </StyledIndex>
   </Layout>
