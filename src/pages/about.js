@@ -20,13 +20,13 @@ const StyledAbout = styled.div`
   a {
     color: ${colors.main_pink};
     font-weight:400;
-    border-bottom: 3px solid ${colors.main_pink};
+    border-bottom: 2px solid ${colors.main_pink};
     padding-bottom:3px;
 
     &:hover {
       padding-bottom:0px;
       color: ${colors.main_text};
-      border-bottom: 3px solid ${colors.main_pink};
+      border-bottom: 2px solid ${colors.main_pink};
     }
   }
   
@@ -35,7 +35,12 @@ const StyledAbout = styled.div`
     height: 80%;
     width: calc(100% - 10vh);
     margin:5vh;
+  }
 
+  @media only screen and (max-width: 1023px) {
+    .container {
+      height: 70%;
+    }
   }
 
   .desc {
@@ -43,12 +48,16 @@ const StyledAbout = styled.div`
     width: 50%;
 
     p {
-      height: calc(0.8vw + 0.8em);
+      margin: calc(1.5vh + 1em);
+    }
+
+    .darker {
+      font-weight:400;
     }
   }
 
   .exp {
-    font-size: ${fonts.body_size};
+    font-size: calc(1vw + 0.6em);
     text-align: right;
     width: 100%;
     line-height: calc(1vw + 1.2em);
@@ -69,7 +78,7 @@ const AboutPage = () => (
           <h1>about me.</h1>
         </div>
         <div className="desc">
-          <span>
+          <span className="darker">
             I enjoy writing efficient, clean code, and creating fluid
             and beautiful user interfaces.
           </span>

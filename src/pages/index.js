@@ -19,7 +19,7 @@ const StyledIndex = styled.div`
 
   .container {
     position:absolute;
-    height: 55%;
+    height: 60%;
     width: calc(100% - 10vh);
     margin:5vh;
   }
@@ -27,6 +27,10 @@ const StyledIndex = styled.div`
   .desc {
     font-size: ${fonts.body_size};
     width: 60%;
+
+    p {
+      margin: calc(2vh + 1.5em);
+    }
   }
 
 `;

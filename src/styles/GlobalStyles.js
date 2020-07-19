@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import colors from './colors';
 import fonts from './fonts';
+import bg from '../images/bg.jpg';
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -20,15 +21,17 @@ const GlobalStyles = createGlobalStyle`
         font-family: ${fonts.header_font};
     }
 
+
     h1 {
         font-weight: ${fonts.header_bold};
-        font-size: calc(5vw + 4em);
+        font-size: calc(7vw + 2.2em);
         letter-spacing:-3px;
     }
 
     h2 {
         font-weight: 300;
-        font-size: calc(3vw + 3em);
+        font-size: calc(5vw + 1em);
+        margin:0 3px;
     }
 
     b {
@@ -49,6 +52,13 @@ const GlobalStyles = createGlobalStyle`
         flex-direction: column;
         justify-content: space-between;
     }
+
+    @media only screen and (max-width: 1023px) {
+        .desc {
+            width: 85% !important;
+        }
+    }
+
 `;
 
 export default GlobalStyles;
