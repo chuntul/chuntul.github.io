@@ -39,9 +39,9 @@ const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         transition: all 0.25s ease-out 0s;
-    }
-    a:hover {
-        transition: all 0.25s ease-out 0s;
+        &:hover {
+            transition: all 0.25s ease-out 0s;
+        }
     }
 
     .container {

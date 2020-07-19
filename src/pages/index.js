@@ -20,8 +20,8 @@ const StyledIndex = styled.div`
   .container {
     position:absolute;
     height: 55%;
-    margin-top:5vh;
-    margin-left: 5vh;
+    width: calc(100% - 10vh);
+    margin:5vh;
   }
 
   .desc {
@@ -29,12 +29,10 @@ const StyledIndex = styled.div`
     width: 60%;
   }
 
-  .home-blob {
-    position: fixed;
-  }
 `;
 
 const IndexPage = () => (
+
   <Layout>
     <StyledIndex>
       <div className="container">
