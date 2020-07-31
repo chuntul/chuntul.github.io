@@ -14,6 +14,16 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Chantal Ho - personal website',
+        short_name: 'Chantal Ho',
+        start_url: '/',
+        display: 'minimal-ui',
+        icon: 'src/images/favicon.png',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [

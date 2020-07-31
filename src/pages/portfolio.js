@@ -34,6 +34,9 @@ const PortfolioPage = () => (
           <h2>Some of</h2>
           <h1>my work.</h1>
         </div>
+        <div className="desc">
+          Coming soon.
+        </div>
       </div>
     </StyledPortfolio>
   </Layout>

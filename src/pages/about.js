@@ -1,10 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import fadeIn from 'react-animations/lib/fade-in'
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import Layout from '../components/layout';
 
 import bg from '../images/bg-about.png';
+
+const fadeInAnimation = keyframes`${fadeIn}`;
 
 const StyledAbout = styled.div`
   width:100%;
@@ -61,6 +64,7 @@ const StyledAbout = styled.div`
     text-align: right;
     width: 100%;
     line-height: calc(1vw + 1.2em);
+    animation: 1s ${fadeInAnimation};
   }
   
   .headers {

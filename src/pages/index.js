@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactTypingEffect from '../vendor/react-typing-effect/src/lib';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import Layout from '../components/layout';
@@ -35,42 +36,48 @@ const StyledIndex = styled.div`
 
 `;
 
-const IndexPage = () => (
+const IndexPage = () => {
+  const typeStrs = ['UI/UX design', 'data visualization', 'good coding practices'];
+  return (
 
-  <Layout>
-    <StyledIndex>
-      <div className="container">
-        <div className="headers">
-          <h2>Hi, I'm</h2>
-          <h1>Chantal.</h1>
+    <Layout>
+      <StyledIndex>
+        <div className="container">
+          <div className="headers">
+            <h2>Hi, I'm</h2>
+            <h1>Chantal.</h1>
+          </div>
+          <div className="desc">
+            <span>
+              Currently a
+              {' '}
+              <b>full-stack software developer</b>
+              {' '}
+              at UHN working on
+              web applications and building user interfaces.
+
+            </span>
+            {' '}
+            <p />
+            <span>
+              I'm passionate about
+              {' '}
+              <b>
+                <ReactTypingEffect
+                  speed="100"
+                  typingDelay="200"
+                  eraseDelay="1000"
+                  text={typeStrs}
+                />
+              </b>
+              .
+            </span>
+          </div>
+
         </div>
-        <div className="desc">
-          <span>
-            Currently a
-            {' '}
-            <b>full-stack software developer</b>
-            {' '}
-            at UHN working on
-            web applications and building user interfaces.
-
-          </span>
-          {' '}
-          <p />
-          <span>
-            I'm passionate about
-            {' '}
-            <b>data visualization</b>
-            {' '}
-            and
-            {' '}
-            <b>UI/UX design</b>
-            .
-          </span>
-        </div>
-
-      </div>
-    </StyledIndex>
-  </Layout>
-);
+      </StyledIndex>
+    </Layout>
+  );
+};
 
 export default IndexPage;
