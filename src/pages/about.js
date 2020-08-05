@@ -37,16 +37,11 @@ const StyledAbout = styled.div`
     margin:5vh;
   }
 
-  @media only screen and (max-width: 1023px) {
-    .container {
-      height: 70%;
-    }
-  }
-
   .desc {
     font-size: ${fonts.body_size};
     text-align:right;
-    padding-left: 50%;
+    width: 50% !important;
+    padding-left:50%;
     
     p {
       margin: calc(1.5vh + 1em);
@@ -67,6 +62,16 @@ const StyledAbout = styled.div`
   .headers {
     width:100%;
     text-align: right;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .container {
+      height: 70%;
+    }
+    .desc {
+      width: 80% !important;
+      padding-left: 20%;
+    }
   }
 `;
 
