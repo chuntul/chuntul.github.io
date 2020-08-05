@@ -1,13 +1,10 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import fadeIn from 'react-animations/lib/fade-in'
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import Layout from '../components/layout';
 
 import bg from '../images/bg-about.png';
-
-const fadeInAnimation = keyframes`${fadeIn}`;
 
 const StyledAbout = styled.div`
   width:100%;
@@ -48,8 +45,9 @@ const StyledAbout = styled.div`
 
   .desc {
     font-size: ${fonts.body_size};
-    width: 50%;
-
+    text-align:right;
+    padding-left: 50%;
+    
     p {
       margin: calc(1.5vh + 1em);
     }
@@ -61,10 +59,9 @@ const StyledAbout = styled.div`
 
   .exp {
     font-size: calc(1vw + 0.6em);
-    text-align: right;
+    text-align: left;
     width: 100%;
     line-height: calc(1vw + 1.2em);
-    animation: 1s ${fadeInAnimation};
   }
   
   .headers {
@@ -81,6 +78,28 @@ const AboutPage = () => (
           <h2>A little</h2>
           <h1>about me.</h1>
         </div>
+        <div className="exp">
+          <h3>Frameworks/technologies I use:</h3>
+          <span>
+            <b>Front-end:</b>
+            {' '}
+            React, Gatsby, Jest/Enzyme, d3.js/PlotlyJS
+            {' '}
+            <br />
+            <b>Backend:</b>
+            {' '}
+            NodeJS/Express, GraphQL, MySQL, Ruby on Rails
+            <br />
+            <b>Misc:</b>
+            {' '}
+            Python, Java, R
+            <br />
+            <b>Tools:</b>
+            {' '}
+            Photoshop, Illustrator, Github, Unix/Linux
+            <br />
+          </span>
+        </div>
         <div className="desc">
           <span className="darker">
             I enjoy writing efficient, clean code, and creating fluid
@@ -94,27 +113,7 @@ const AboutPage = () => (
             , birds, and a good book.
           </span>
         </div>
-        <div className="exp">
-          <span>
-            <b>Front-end:</b>
-            {' '}
-            React, Gatsby, d3.js/PlotlyJS
-            {' '}
-            <br />
-            <b>Backend:</b>
-            {' '}
-            NodeJS/Express, GraphQL, MySQL
-            <br />
-            <b>Misc:</b>
-            {' '}
-            Python, Java, R
-            <br />
-            <b>Tools:</b>
-            {' '}
-            Photoshop, Illustrator, Github, Unix/Linux
-            <br />
-          </span>
-        </div>
+
       </div>
     </StyledAbout>
   </Layout>

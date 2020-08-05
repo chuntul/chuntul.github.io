@@ -10,6 +10,7 @@ const StyledNav = styled.div`
   left:5vh;
   position:absolute;
   max-height:200px;
+  z-index:999;
 
   .link-container {
     display:flex;
@@ -73,9 +74,10 @@ const Nav = () => {
       name: 'Home', url: '/',
     }, {
       name: 'About', url: '/about/',
-    }, {
-      name: 'Portfolio', url: '/portfolio/',
     },
+    // {
+    //   name: 'Portfolio', url: '/portfolio/',
+    // },
   ];
 
   return (
