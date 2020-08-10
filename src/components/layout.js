@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '../styles/GlobalStyles';
 import Nav from './nav';
+import BottomLinks from './bottomlinks';
 
 const Layout = ({ children }) => (
   <>
@@ -15,6 +16,7 @@ const Layout = ({ children }) => (
     </Helmet>
     <GlobalStyles />
     <Nav />
+    <BottomLinks />
     <main>{children}</main>
   </>
 
